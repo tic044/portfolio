@@ -1,6 +1,211 @@
 body {
     /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
+         and use the OS's UI font as the website font
        */
     font: 100%/1.5 system-ui;
+    max-width: 80ch;
+    margin-inline: auto;
+    padding: 2rem;
   }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid  oklch(0.8 0.03 200);
+  &:hover {
+    border-bottom: 0.4em solid var(--color-accent);
+    background-color: var(--background-color);
+    padding-bottom: 0.1em;
+  }
+}
+
+nav a.current {
+  font-weight: bold;
+  border-bottom: 0.4em solid oklch(0.5876 0.1389 241.97);
+  padding-bottom: 0.1em;
+}
+
+:root {
+  --color-accent: oklch(0.9014 0.0555 230.9);
+  --color-accent-dark: oklch(0.4 0.15 240);
+  --color-text-dark: oklch(0.25 0.02 240);
+  --background-color: oklch(0.9771 0.0125 236.62);
+  --background-section: oklch(0.98 0.005 240);
+  --border-light: oklch(0.9 0.01 240);
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+form label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+form input, form textarea {
+  grid-column: 2;
+}
+
+form button {
+  grid-column: 2;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+.projects h2 {
+  margin: 0;
+}
+
+/* Resume Page Styling */
+body > h2:first-of-type {
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+body > img {
+  display: block;
+  margin: 1em auto 2em;
+  border-radius: 50%;
+  border: 4px solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body > p {
+  text-align: center;
+  margin: 0.4em 0;
+  font-size: 0.95em;
+}
+
+body > p a {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+body > p a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+section {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+section > h3 {
+  background: var(--background-section);
+  padding: 0.6em 1em;
+  border-left: 4px solid var(--color-accent);
+  margin-left: -1em;
+  margin-right: -1em;
+  font-weight: 600;
+}
+
+article {
+  margin-bottom: 2em;
+  padding: 1.5em;
+  background: var(--background-section);
+  border-radius: 8px;
+  border-left: 3px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+article:hover {
+  border-left-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transform: translateX(4px);
+}
+
+article h4 {
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+article > p:first-of-type {
+  font-weight: 500;
+  color: var(--color-text-dark);
+  margin-top: 0.3em;
+  font-style: italic;
+}
+
+article time {
+  display: block;
+  color: oklch(0.5 0.05 240);
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+  font-weight: 500;
+}
+
+article ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+article li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+  color: oklch(0.3 0.02 240);
+}
+
+article li::marker {
+  color: var(--color-accent);
+}
+
+/* Skills section specific */
+section:last-of-type p {
+  background: white;
+  padding: 1em;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  margin-bottom: 0.8em;
+}
+
+section:last-of-type p strong,
+section:last-of-type p::first-line {
+  font-weight: 600;
+  color: var(--color-accent-dark);
+}
