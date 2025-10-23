@@ -88,3 +88,58 @@ form?.addEventListener('submit', function (event) {
     url = url.slice(0, -1);    
     location.href = url;
 });
+
+// Make articles with data-href clickable
+$$('article[data-href]').forEach(article => {
+    article.style.cursor = 'pointer';
+    article.addEventListener('click', function() {
+        location.href = this.dataset.href;
+    });
+});
+
+export async function fetchJSON(url) {
+    try {
+        // Fetch the JSON file from the given URL
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+      console.error('Error fetching or parsing JSON data:', error);
+    }
+
+  }
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+    containerElement.innerHTML = '';
+    
+    for (const project of projects) {
+        const article = document.createElement('article');
+        
+        // If project has a URL, make it clickable
+        if (project.url) {
+            // Prepend BASE_PATH to relative URLs
+            const url = project.url.startsWith('http') ? project.url : BASE_PATH + project.url;
+            article.dataset.href = url;
+            article.style.cursor = 'pointer';
+            article.addEventListener('click', function() {
+                location.href = this.dataset.href;
+            });
+        }
+        
+        article.innerHTML = `
+            <${headingLevel}>${project.title}</${headingLevel}>
+            <img src="${project.image}" alt="${project.title}">
+            <p>${project.description}</p>
+        `;
+        containerElement.appendChild(article);
+    }
+
+}
+
+export async function fetchGithubData(username) {
+    return fetchJSON(`https://api.github.com/users/${username}`);
+
+}
