@@ -138,7 +138,27 @@
           }
         }
       }
+
+      /* Back button */
+
+      .back-button {
+        display: inline-block;
+        margin-top: 1em;
+        padding: 0.5em 1.5em;
+        background: var(--color-neutral-40);
+        color: white;
+        text-decoration: none;
+        border-radius: 0.3em;
+        font-weight: 600;
+        font-size: 0.9em;
+        transition: background 0.2s ease;
+      }
+
+      .back-button:hover {
+        background: var(--color-neutral-30);
+      }
     </style>
+    <script type="module" src="../../global.js"></script>
   </head>
 
   <body>
@@ -149,6 +169,8 @@
       </h1>
 
       <p><strong>Timothy Chang</strong> — <em>tic044@ucsd.edu</em></p>
+      
+      <a href="../index.html" class="back-button">← Back to Projects</a>
     </header>
 
     <main>
