@@ -3,7 +3,7 @@ console.log('IT\'S ALIVE!');
 const BASE_PATH =
   location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? '/' // Local server
-    : '/tic044.github.io/'; // GitHub Pages repo name
+    : '/tic044.github.io/portfolio/'; // GitHub Pages repo name
 
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
