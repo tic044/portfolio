@@ -2,7 +2,7 @@
     {
         "title": "Persuasive or Deceptive Visualization?",
         "year": 2025,
-        "image": "../images/bar-chart.svg",
+        "image": "images/bar-chart.svg",
         "description": "A project that explores the relationship between adolescent fertility rates and female education attainment in the United States over time. This project demonstrates both persuasive and deceptive visualizations to support the proposition that adolescent pregnancy rates are declining in the United States over time.",
         "url": "projects/project2/project2_report.html"
     },

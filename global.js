@@ -129,9 +129,12 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
             });
         }
         
+        // Prepend BASE_PATH to relative image paths
+        const imageSrc = project.image.startsWith('http') ? project.image : BASE_PATH + project.image;
+        
         article.innerHTML = `
             <${headingLevel}>${project.title}</${headingLevel}>
-            <img src="${project.image}" alt="${project.title}">
+            <img src="${imageSrc}" alt="${project.title}">
             <p>${project.description}</p>
         `;
         containerElement.appendChild(article);
