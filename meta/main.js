@@ -53,7 +53,7 @@ function processCommits(data) {
     dl.append('dd').text(d3.group(data, d => d.file).size);
   
     // Add total LOC
-    dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
+    dl.append('dt').html('Total LOC');
     dl.append('dd').text(data.length);
   
     // Add total commits
