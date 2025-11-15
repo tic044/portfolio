@@ -7,10 +7,11 @@
         "url": "projects/project2/project2_report.html"
     },
     {
-        "title": "Aspernatur ducimus totam officia?",
+        "title": "Cyclepathy: An Interactive Map of Bicycle Routes in Massachusetts",
         "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ex, fugiat autem. Facilis accusantium quo impedit soluta culpa, praesentium quia nemo recusandae minima ducimus, consequuntur vero magni suscipit corrupti voluptate corporis vitae dicta beatae. Incidunt ipsum totam aliquid hic."
+        "description": "A project that creates an interactive map of bicycle routes in Massachusetts. This project uses D3.js and Mapbox to create a map of the state of Massachusetts and to display the bicycle routes on the map. The project also uses the Massachusetts Department of Transportation's data on the bicycle routes.",
+        "url": "https://tic044.github.io/cyclepathy/"
     },
     {
         "title": "Temporibus, et! Optio, alias?",
