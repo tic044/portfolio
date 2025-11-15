@@ -8,7 +8,7 @@
     },
     {
         "title": "Cyclepathy: An Interactive Map of Bicycle Routes in Massachusetts",
-        "year": 2024,
+        "year": 2025,
         "image": "images/cyclepathy.png",
         "description": "A project that creates an interactive map of bicycle routes in Massachusetts. This project uses D3.js and Mapbox to create a map of the state of Massachusetts and to display the bicycle routes on the map. The project also uses the Massachusetts Department of Transportation's data on the bicycle routes.",
         "url": "https://tic044.github.io/cyclepathy/"
